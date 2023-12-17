@@ -6,7 +6,7 @@ If you're not familiar with LCM, read about it here - [article on Hugging Face](
 
 ![](preview.png)
 
-Find the UI for SGHM in the Extras tab after installing the extension.
+Find the UI for realtime-lcm-canvas in the Extras tab after installing the extension.
 
 # Installation
 
