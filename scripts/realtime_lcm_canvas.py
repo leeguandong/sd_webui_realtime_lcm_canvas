@@ -118,12 +118,12 @@ def on_ui_tabs():
                                height=canvas_size, type="pil")
                 output = gr.Image(width=canvas_size, height=canvas_size)
 
-                def process_image(prompt, img, steps, cfg, sketch_strength, seed, canvas_size):
+                def process_image(prompt, img, steps, cfg, sketch_strength, seed):
                     if not img:
                         return Image.new("RGB", (canvas_size, canvas_size))
                     return inference(prompt, img, steps, cfg, sketch_strength, seed=int(seed))
 
-                reactive_controls = [prompt, img, steps, cfg, sketch_strength, seed, canvas_size]
+                reactive_controls = [prompt, img, steps, cfg, sketch_strength, seed]
                 for control in reactive_controls:
                     control.change(fn=process_image, inputs=reactive_controls, outputs=output)
 
